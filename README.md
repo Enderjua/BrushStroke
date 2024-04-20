@@ -11,4 +11,7 @@
 ![OpenAI](https://img.shields.io/badge/-OpenAI-333333?style=flat&logo=openai)
 
 
+example videos=>https://www.instagram.com/p/C5jIGAgMl9r/
+
+
 bu kadar readme yeter.
