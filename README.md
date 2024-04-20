@@ -9,3 +9,6 @@
 <br>
 ![GitHub](https://img.shields.io/badge/-GitHub-333333?style=flat&logo=github)
 ![OpenAI](https://img.shields.io/badge/-OpenAI-333333?style=flat&logo=openai)
+
+
+bu kadar readme yeter.
