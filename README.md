@@ -68,20 +68,54 @@ Stay tuned for the release of this app on Linux devices
       projectId: 'anla amk'
     )
   );
-
-  // Uygulamanızın kodunu burada yazın
-}
+...
+}...
 ```
 
 ✨ **Add Ads (Optional)**:<br>
     💰 **AdMob Registration**: Register with AdMob to start earning! (🤑)<br>
     💡 **Ad Info**: Add ad info to `homescreen.dart`, `archivescreen.dart`, and `resultscreen.dart` and shine bright! (💡)<br>
+```dart
+     final String adUnitId = Platform.isAndroid
+      // Use this ad unit on Android...
+      ? 'ads id'
+      // ... or this one on iOS.
+      : 'ads id ios';
+```
+    
 
 🧠 **Backend Connection**:<br>
     🔐 **API Info**: Enter your API info in `backend/openai.dart` to connect with AI! (🧠)<br>
+```dart
+      OpenAI.apiKey = "yourKey";
+  OpenAI.model = model; // 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
+  OpenAI.organization = 'yourOrgID / optional';
+  OpenAI client = OpenAI();
+```
 
 📸 **Image Storage**:<br>
     🗑️ **Plesk Link**: If you don't want to store images, you can delete the Plesk link in `backend/openai.dart`! (🗑️)<br>
+```dart
+      bool accept = isUrl(result.url);
+  if(accept) {
+    var url = Uri.parse('my API server'+result.url);
+
+  // HTTP isteği oluştur
+  var response = await http.get(url);
+  
+
+  // İstek durumunu kontrol et
+  if (response.statusCode == 200) {
+
+    // Resmin ismini yazdır
+    return "my API Server/${response.body}";
+  }
+  } else {
+    return "Failed";
+  }
+  // return result.url;
+}
+```
 
 🎉 **That's it!** 🎉
 
