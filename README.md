@@ -58,10 +58,9 @@ Stay tuned for the release of this app on Linux devices
     🔥 **Firebase Setup**: Add Firebase to your app and power up! (🔥)<br>
     ✍️ **App Info**: Fill in the required info in `main.dart` to give your app an identity! (📝)<br>
 
-✨ **Add Ads (Optional)**:
-
-    💰 AdMob Registration: Register with AdMob to start earning! (🤑)
-    💡 Ad Info: Add ad info to homescreen.dart, archivescreen.dart, and resultscreen.dart and shine bright! (💡)
+✨ **Add Ads (Optional)**:<br>
+    💰 AdMob Registration: Register with AdMob to start earning! (🤑)<br>
+    💡 Ad Info: Add ad info to `homescreen.dart`, `archivescreen.dart`, and `resultscreen.dart` and shine bright! (💡)<br>
 
 🧠 **Backend Connection**:
 
