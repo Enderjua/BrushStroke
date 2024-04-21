@@ -59,16 +59,14 @@ Stay tuned for the release of this app on Linux devices
     ✍️ **App Info**: Fill in the required info in `main.dart` to give your app an identity! (📝)<br>
 
 ✨ **Add Ads (Optional)**:<br>
-    💰 AdMob Registration: Register with AdMob to start earning! (🤑)<br>
-    💡 Ad Info: Add ad info to `homescreen.dart`, `archivescreen.dart`, and `resultscreen.dart` and shine bright! (💡)<br>
+    💰 **AdMob Registration**: Register with AdMob to start earning! (🤑)<br>
+    💡 **Ad Info**: Add ad info to `homescreen.dart`, `archivescreen.dart`, and `resultscreen.dart` and shine bright! (💡)<br>
 
-🧠 **Backend Connection**:
+🧠 **Backend Connection**:<br>
+    🔐 **API Info**: Enter your API info in `backend/openai.dart` to connect with AI! (🧠)<br>
 
-    🔐 API Info: Enter your API info in `backend/openai.dart` to connect with AI! (🧠)
-
-📸 **Image Storage**:
-
-    🗑️ Plesk Link: If you don't want to store images, you can delete the Plesk link in `backend/openai.dart`! (🗑️)
+📸 **Image Storage**:<br>
+    🗑️ **Plesk Link**: If you don't want to store images, you can delete the Plesk link in `backend/openai.dart`! (🗑️)<br>
 
 🎉 **That's it!** 🎉
 
