@@ -50,24 +50,75 @@ Stay tuned for the release of this app on Linux devices
 
 ## Android
 
-![image](https://github.com/Enderjua/BrushStroke/assets/120639059/38ffa3a9-c97c-48f8-8f9a-70db6971df12)
+**🎉 Set Up the App Manually 🎉**
 
+🚀 **Quick Start**:
+    📱 **Firebase Account**: Create a Firebase account to start your journey! (👨‍💻)
+    🔥 **Firebase Setup**: Add Firebase to your app and power up! (🔥)
+    ✍️ **App Info**: Fill in the required info in `main.dart` to give your app an identity! (📝)
+    ```dart
+    await Firebase.initializeApp(
+      options: const FirebaseOptions(
+          apiKey: 'firebase api key',
+          appId: 'app id',
+          messagingSenderId: 'anladin',
+          projectId: 'anla amk'));
+          ```
+
+✨ **Add Ads (Optional)**:
+
+    💰 AdMob Registration: Register with AdMob to start earning! (🤑)
+    💡 Ad Info: Add ad info to `homescreen.dart`, `archivescreen.dart`, and `resultscreen.dart` and shine bright! (💡)
+    ```dart
+     final String adUnitId = Platform.isAndroid
+      // Use this ad unit on Android...
+      ? 'ads id'
+      // ... or this one on iOS.
+      : 'ads id ios';
+      ```
+
+🧠 **Backend Connection**:
+
+    🔐 API Info: Enter your API info in `backend/openai.dart` to connect with AI! (🧠)
+    ```dart
+     OpenAI.apiKey = "yourKey";
+     OpenAI.model = model; // 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
+     OpenAI.organization = 'yourOrgID / optional';
+     ```
+
+📸 **Image Storage**:
+
+    🗑️ Plesk Link: If you don't want to store images, you can delete the Plesk link in `backend/openai.dart`! (🗑️)
+    ```dart
+      bool accept = isUrl(result.url);
+  if(accept) {
+    var url = Uri.parse('my API server'+result.url);
+
+  // HTTP isteği oluştur
+  var response = await http.get(url);
+  
+
+  // İstek durumunu kontrol et
+  if (response.statusCode == 200) {
+
+    // Resmin ismini yazdır
+    return "my API Server/${response.body}";
+  }
+  } else {
+    return "Failed";
+  }
+  // return result.url;
+}
+    ```
+
+🎉 **That's it!** 🎉
 
 
 ## Manual Installation
 
 If you want to use the app directly without installation and without an API, click it <a href="https://play.google.com/store/apps/details?id=com.schweis.strokedebug" target="_blank">here</a>
 
-<div class="aspect-ratio-image" style="--height-percentage: 41.7%;">
-        <video class="article-hero-mp4__video" autoplay="" muted="" loop="" playsinline="" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/KeyImage-Animatedv2.mp4" title="Composite of Android marks: green Android robot, Android wordmark with bugdroid head spinning into different characters below, bugdroids in different motifs: a disco ball, with spikes; drawing of bugdroid head, and sketch of Google and Android wordmarks" poster="
-            
-              https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/KeyImage-Static.jpg
-            ">
-          Sorry, your browser doesn't support embedded videos, but don't worry, you can
-            <a href="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/KeyImage-Animatedv2.mp4" rel="noopener" target="_blank">download it</a>
-            and watch it with your favorite video player!
-        </video>
-      </div>
+![image](https://github.com/Enderjua/BrushStroke/assets/120639059/38ffa3a9-c97c-48f8-8f9a-70db6971df12)
 
 
 
