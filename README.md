@@ -37,13 +37,6 @@
 - 💸 **Completely Free:** Create stunning visuals without spending a dime. Just an API key is all you need!
 - 📈 **Monetize Your Creativity:** Integrate AdMob ads into your app and earn money from your creations.
 <br/>
-- User-friendly, code-free interface.
-- Access to the latest AI image generation models.
-- Secure data storage.
-- Unlimited photo storage.
-- Continuously evolving new features.
-- Completely free.
-- Google AdMob support and monetization potential.
 
 
 
