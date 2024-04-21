@@ -53,7 +53,7 @@ Stay tuned for the release of this app on Linux devices
 
 ## Manual Installation
 
-If you want to use the app directly without installation and without an API, click it <a href="https://play.google.com/store/apps/details?id=com.schweis.strokedebug> here </a>
+If you want to use the app directly without installation and without an API, click it <a href="https://play.google.com/store/apps/details?id=com.schweis.strokedebug" target="_blank">here</a>
 ![image](https://github.com/Enderjua/BrushStroke/assets/120639059/38ffa3a9-c97c-48f8-8f9a-70db6971df12)
 
 
