@@ -38,6 +38,25 @@
 - 📈 **Monetize Your Creativity:** Integrate AdMob ads into your app and earn money from your creations.
 <br/>
 
+# Installation and Running
+
+A script is provided for Windows and Linux machines to install, update, and run ENFUGUE. Copy the relevant command below and answer the on-screen prompts to choose your installation type and install optional dependencies.
+
+## Windows
+You will be able to use this app on Windows devices in the near future
+
+## Linux
+Stay tuned for the release of this app on Linux devices
+
+## Android
+
+
+## Manual Installation
+
+If you want to use the app directly without installation and without an API, click it <a href="https://play.google.com/store/apps/details?id=com.schweis.strokedebug> here </a>
+![image](https://github.com/Enderjua/BrushStroke/assets/120639059/38ffa3a9-c97c-48f8-8f9a-70db6971df12)
+
+
 
 
 
