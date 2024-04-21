@@ -64,8 +64,8 @@ Stay tuned for the release of this app on Linux devices
     options: const FirebaseOptions(
       apiKey: 'firebase api key',
       appId: 'app id',
-      messagingSenderId: 'anladin',
-      projectId: 'anla amk'
+      messagingSenderId: 'sender id',
+      projectId: 'project id'
     )
   );
 ...
