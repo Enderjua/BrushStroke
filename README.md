@@ -8,10 +8,9 @@
 <br>
 ![GitHub](https://img.shields.io/badge/-GitHub-333333?style=flat&logo=github)
 ![OpenAI](https://img.shields.io/badge/-OpenAI-333333?style=flat&logo=openai)
-
 <img src="https://img.shields.io/static/v1?label=enderjua&message=brushstroke&color=ff3366&logo=github" alt="marijua - app.schweis.us">
 <img src="https://img.shields.io/github/stars/enderjua/brushstroke?style=social" alt="stars - app.schweis.us">
-<img src="https://img.shields.io/github/forks/enderjua/brushstroke?style=social" alt="forks - app.schweis.us"><br />
+<img src="https://img.shields.io/github/forks/enderjua/brushstroke?style=social" alt="forks - app.schweis.us">
 <a href="https://github.com/enderjua/brushstroke/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-GPL3-ff3366" alt="License"></a>
 
 
