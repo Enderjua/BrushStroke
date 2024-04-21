@@ -57,7 +57,7 @@ Stay tuned for the release of this app on Linux devices
     📱 **Firebase Account**: Create a Firebase account to start your journey! (👨‍💻)<br>
     🔥 **Firebase Setup**: Add Firebase to your app and power up! (🔥)<br>
     ✍️ **App Info**: Fill in the required info in `main.dart` to give your app an identity! (📝)<br>
-    ```dart
+```dart
     Future<void> main() async {
   // Firebase'i başlatın
   await Firebase.initializeApp(
