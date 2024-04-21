@@ -54,6 +54,16 @@ Stay tuned for the release of this app on Linux devices
 ## Manual Installation
 
 If you want to use the app directly without installation and without an API, click it <a href="https://play.google.com/store/apps/details?id=com.schweis.strokedebug" target="_blank">here</a>
+<div class="aspect-ratio-image" style="--height-percentage: 41.7%;">
+        <video class="article-hero-mp4__video" autoplay="" muted="" loop="" playsinline="" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/KeyImage-Animatedv2.mp4" title="Composite of Android marks: green Android robot, Android wordmark with bugdroid head spinning into different characters below, bugdroids in different motifs: a disco ball, with spikes; drawing of bugdroid head, and sketch of Google and Android wordmarks" poster="
+            
+              https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/KeyImage-Static.jpg
+            ">
+          Sorry, your browser doesn't support embedded videos, but don't worry, you can
+            <a href="https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/KeyImage-Animatedv2.mp4" rel="noopener" target="_blank">download it</a>
+            and watch it with your favorite video player!
+        </video>
+      </div>
 ![image](https://github.com/Enderjua/BrushStroke/assets/120639059/38ffa3a9-c97c-48f8-8f9a-70db6971df12)
 
 
