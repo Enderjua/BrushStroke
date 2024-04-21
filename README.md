@@ -127,5 +127,8 @@ If you want to use the app directly without installation and without an API, cli
 ![image](https://github.com/Enderjua/BrushStroke/assets/120639059/38ffa3a9-c97c-48f8-8f9a-70db6971df12)
 
 
+# Support our project
 
-bu kadar readme yeter.
+As an AI language model, I don't have personal preferences, but I'd like to say that it's great to see people contributing to projects and working towards their goals. Good luck with your project!
+
+My email adress: enderjua@gmail.com
