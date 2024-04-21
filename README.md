@@ -15,9 +15,6 @@
     <img src="https://img.shields.io/github/stars/enderjua/brushstroke?style=social" alt="stars - app.schweis.us">
     <img src="https://img.shields.io/github/forks/enderjua/brushstroke?style=social" alt="forks - app.schweis.us"><br />
     <a href="https://github.com/enderjua/brushstroke/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-GPL3-ff3366" alt="License"></a>
-    <a href="https://github.com/enderjua/brushstroke/releases/"><img src="https://img.shields.io/github/tag/enderjua/brushstroke?include_prereleases=&sort=semver&color=ff3366" alt="GitHub tag"></a>
-    <a href="https://github.com/enderjua/brushstroke/releases/"><img alt="GitHub release (with filter)" src="https://img.shields.io/github/v/release/enderjua/brushstroke?color=ff3366"></a>
-    <a href="https://github.com/enderjua/brushstroke/releases/"><img alt="GitHub all releases" src="https://img.shields.io/github/downloads/enderjua/brushstroke/total?logo=github&color=ff3366"></a>
 </p>
 
 
