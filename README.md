@@ -57,6 +57,21 @@ Stay tuned for the release of this app on Linux devices
     📱 **Firebase Account**: Create a Firebase account to start your journey! (👨‍💻)<br>
     🔥 **Firebase Setup**: Add Firebase to your app and power up! (🔥)<br>
     ✍️ **App Info**: Fill in the required info in `main.dart` to give your app an identity! (📝)<br>
+    ```dart
+    Future<void> main() async {
+  // Firebase'i başlatın
+  await Firebase.initializeApp(
+    options: const FirebaseOptions(
+      apiKey: 'firebase api key',
+      appId: 'app id',
+      messagingSenderId: 'anladin',
+      projectId: 'anla amk'
+    )
+  );
+
+  // Uygulamanızın kodunu burada yazın
+}
+```
 
 ✨ **Add Ads (Optional)**:<br>
     💰 **AdMob Registration**: Register with AdMob to start earning! (🤑)<br>
