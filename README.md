@@ -64,8 +64,6 @@ If you want to use the app directly without installation and without an API, cli
             and watch it with your favorite video player!
         </video>
       </div>
-![image](https://github.com/Enderjua/BrushStroke/assets/120639059/38ffa3a9-c97c-48f8-8f9a-70db6971df12)
-
 
 
 
