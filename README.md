@@ -51,65 +51,25 @@ Stay tuned for the release of this app on Linux devices
 ## Android
 
 **🎉 Set Up the App Manually 🎉**
+<br>
 
-🚀 **Quick Start**:
-    📱 **Firebase Account**: Create a Firebase account to start your journey! (👨‍💻)
-    🔥 **Firebase Setup**: Add Firebase to your app and power up! (🔥)
-    ✍️ **App Info**: Fill in the required info in `main.dart` to give your app an identity! (📝)
-    ```dart
-    await Firebase.initializeApp(
-      options: const FirebaseOptions(
-          apiKey: 'firebase api key',
-          appId: 'app id',
-          messagingSenderId: 'anladin',
-          projectId: 'anla amk'));
-          ```
+🚀 **Quick Start**:<br>
+    📱 **Firebase Account**: Create a Firebase account to start your journey! (👨‍💻)<br>
+    🔥 **Firebase Setup**: Add Firebase to your app and power up! (🔥)<br>
+    ✍️ **App Info**: Fill in the required info in `main.dart` to give your app an identity! (📝)<br>
 
 ✨ **Add Ads (Optional)**:
 
     💰 AdMob Registration: Register with AdMob to start earning! (🤑)
     💡 Ad Info: Add ad info to `homescreen.dart`, `archivescreen.dart`, and `resultscreen.dart` and shine bright! (💡)
-    ```dart
-     final String adUnitId = Platform.isAndroid
-      // Use this ad unit on Android...
-      ? 'ads id'
-      // ... or this one on iOS.
-      : 'ads id ios';
-      ```
 
 🧠 **Backend Connection**:
 
     🔐 API Info: Enter your API info in `backend/openai.dart` to connect with AI! (🧠)
-    ```dart
-     OpenAI.apiKey = "yourKey";
-     OpenAI.model = model; // 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
-     OpenAI.organization = 'yourOrgID / optional';
-     ```
 
 📸 **Image Storage**:
 
     🗑️ Plesk Link: If you don't want to store images, you can delete the Plesk link in `backend/openai.dart`! (🗑️)
-    ```dart
-      bool accept = isUrl(result.url);
-  if(accept) {
-    var url = Uri.parse('my API server'+result.url);
-
-  // HTTP isteği oluştur
-  var response = await http.get(url);
-  
-
-  // İstek durumunu kontrol et
-  if (response.statusCode == 200) {
-
-    // Resmin ismini yazdır
-    return "my API Server/${response.body}";
-  }
-  } else {
-    return "Failed";
-  }
-  // return result.url;
-}
-    ```
 
 🎉 **That's it!** 🎉
 
