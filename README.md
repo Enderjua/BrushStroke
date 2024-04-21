@@ -27,5 +27,25 @@
 <em>Just click on the pictures of the BrushStroke application to see them!</em>
 </div><br />
 
+# Feature Summary
+
+- 🚀 **One Click Install:** Get started in seconds with our easy Firebase setup. No coding required!
+- 🔥 **Cutting-Edge AI Models:** Access the latest and greatest AI image generation models, including DALL-E 3, DALL-E 2, and Google AI. More open-source models coming soon!
+- 🔒 **Unparalleled Security:** Your data is safeguarded with robust Firebase database and encryption techniques.
+- 📸 **Unlimited Storage & Accessibility:** Store and access all your generated images without limits thanks to our dedicated Plesk storage.
+- 🎨 **Coming Soon:** Unleash your creativity with upcoming image editing and variation creation features.
+- 💸 **Completely Free:** Create stunning visuals without spending a dime. Just an API key is all you need!
+- 📈 **Monetize Your Creativity:** Integrate AdMob ads into your app and earn money from your creations.
+<br/>
+- User-friendly, code-free interface.
+- Access to the latest AI image generation models.
+- Secure data storage.
+- Unlimited photo storage.
+- Continuously evolving new features.
+- Completely free.
+- Google AdMob support and monetization potential.
+
+
+
 
 bu kadar readme yeter.
