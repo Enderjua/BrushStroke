@@ -61,7 +61,7 @@ Stay tuned for the release of this app on Linux devices
 ✨ **Add Ads (Optional)**:
 
     💰 AdMob Registration: Register with AdMob to start earning! (🤑)
-    💡 Ad Info: Add ad info to `homescreen.dart`, `archivescreen.dart`, and `resultscreen.dart` and shine bright! (💡)
+    💡 Ad Info: Add ad info to homescreen.dart, archivescreen.dart, and resultscreen.dart and shine bright! (💡)
 
 🧠 **Backend Connection**:
 
