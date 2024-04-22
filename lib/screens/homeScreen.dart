@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
   bool? banned;
   bool? isPhysicalDevice;
 
-  Encrypting encrypting = Encrypting(vectorKey: "8xNw2lXH58QdSU9K");
+  Encrypting encrypting = Encrypting(vectorKey: "yourkey");
 
   final List<String> _imagePaths = [
     'assets/img/gemini.jpg',
