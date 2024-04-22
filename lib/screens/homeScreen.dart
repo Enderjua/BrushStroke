@@ -747,8 +747,8 @@ class _HomeScreenState extends State<HomeScreen> {
   void _createInterstitialAd() {
     InterstitialAd.load(
         adUnitId: Platform.isAndroid
-            ? 'ca-app-pub-8464918632664675/4268074491'
-            : 'ca-app-pub-3940256099942544/4411468910',
+            ? 'ad id'
+            : 'ad id',
         request: request,
         adLoadCallback: InterstitialAdLoadCallback(
           onAdLoaded: (InterstitialAd ad) {
@@ -799,8 +799,8 @@ class _HomeScreenState extends State<HomeScreen> {
     if (_rewardedInterstitialAd != null) return; //
     RewardedInterstitialAd.load(
         adUnitId: Platform.isAndroid
-            ? 'ca-app-pub-8464918632664675/8622252472'
-            : 'ca-app-pub-3940256099942544/6978759866',
+            ? 'ad id'
+            : 'ad id',
         request: request,
         rewardedInterstitialAdLoadCallback: RewardedInterstitialAdLoadCallback(
           onAdLoaded: (RewardedInterstitialAd ad) {
