@@ -16,7 +16,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../backend/deviceInfo.dart';
 
-
 class HomeScreen extends StatefulWidget {
   /// The requested size of the banner. Defaults to [AdSize.banner].
   final AdSize adSize;
@@ -31,8 +30,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-
-
   final TextEditingController _prompt = TextEditingController();
   int _selectedIndex =
       -1; // Seçili resmin index'i (-1 başta hiçbiri seçili değil)
@@ -96,7 +93,8 @@ class _HomeScreenState extends State<HomeScreen> {
   getImagesInfo() async {
     final deviceID = await deviceinfoService.getDeviceID();
     final androidID = encrypting.encrypterData(deviceID);
-    final snapshot = await images.where('androidID', isEqualTo: androidID).get();
+    final snapshot =
+        await images.where('androidID', isEqualTo: androidID).get();
     final lenght = snapshot.docs.length;
     return lenght;
   }
@@ -131,10 +129,14 @@ class _HomeScreenState extends State<HomeScreen> {
         // print(Uint8List.fromList(device['ipAdress'].cast<int>()));
         setState(() {
           deviceNames = device['androidName'];
-          IPAdress = encrypting.decrypterData(Uint8List.fromList(device['ipAdress'].cast<int>()));
-          deviceModels = encrypting.decrypterData(Uint8List.fromList(device['androidModel'].cast<int>()));
-          deviceHosts = encrypting.decrypterData(Uint8List.fromList(device['androidHost'].cast<int>()));
-          deviceIDs = encrypting.decrypterData(Uint8List.fromList(device['androidID'].cast<int>()));
+          IPAdress = encrypting.decrypterData(
+              Uint8List.fromList(device['ipAdress'].cast<int>()));
+          deviceModels = encrypting.decrypterData(
+              Uint8List.fromList(device['androidModel'].cast<int>()));
+          deviceHosts = encrypting.decrypterData(
+              Uint8List.fromList(device['androidHost'].cast<int>()));
+          deviceIDs = encrypting.decrypterData(
+              Uint8List.fromList(device['androidID'].cast<int>()));
           isPhysicalDevices = device['androidPhysical'];
         });
       } else {}
@@ -220,7 +222,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
   int maxFailedLoadAttempts = 3;
 
-
   InterstitialAd? _interstitialAd;
   int _numInterstitialLoadAttempts = 0;
 
@@ -228,6 +229,8 @@ class _HomeScreenState extends State<HomeScreen> {
     nonPersonalizedAds: false,
   );
 
+  RewardedInterstitialAd? _rewardedInterstitialAd;
+  int _numRewardedInterstitialLoadAttempts = 0;
 
   bool _isClicked = false;
 
@@ -267,7 +270,6 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
               Padding(
                 padding: EdgeInsets.only(top: height / 30 + 5, left: 10.0),
                 child: Text('Prompt',
@@ -390,79 +392,81 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: const EdgeInsets.only(left: 10.0, top: 13.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: _selectedIndex == 1 ? _dimensions3.asMap().entries.map((entry) {
-                    int index = entry.key;
-                    String dimension = entry.value;
-                    return InkWell(
-                      // Tıklanabilir konteynerlar için InkWell kullanın
-                      onTap: () {
-                        setState(() {
-                          _selectedIndexSize = index;
-                        });
-                      },
-                      child: Container(
-                        width: width / 5 + 9,
-                        height: height / 15,
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 44, 44, 44),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(14.0)),
-                          border: _selectedIndexSize ==
-                                  index // Seçili ise border'ı ekle
-                              ? Border.all(
-                                  color:
-                                      const Color.fromARGB(255, 83, 196, 255),
-                                  width: 2.0,
-                                )
-                              : null, // Seçili değilse border'ı kaldır
-                        ),
-                        child: Center(
-                          child: Text(
-                            dimension,
-                            style: const TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ),
-                    );
-                  }).toList() : _dimensions.asMap().entries.map((entry) {
-                    int index = entry.key;
-                    String dimension = entry.value;
-                    return InkWell(
-                      // Tıklanabilir konteynerlar için InkWell kullanın
-                      onTap: () {
-                        setState(() {
-                          _selectedIndexSize = index;
-                        });
-                      },
-                      child: Container(
-                        width: width / 5 + 9,
-                        height: height / 15,
-                        decoration: BoxDecoration(
-                          color: const Color.fromARGB(255, 44, 44, 44),
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(14.0)),
-                          border: _selectedIndexSize ==
-                                  index // Seçili ise border'ı ekle
-                              ? Border.all(
-                                  color:
-                                      const Color.fromARGB(255, 83, 196, 255),
-                                  width: 2.0,
-                                )
-                              : null, // Seçili değilse border'ı kaldır
-                        ),
-                        child: Center(
-                          child: Text(
-                            dimension,
-                            style: const TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ),
-                    );
-                  }).toList(),
+                  children: _selectedIndex == 1
+                      ? _dimensions3.asMap().entries.map((entry) {
+                          int index = entry.key;
+                          String dimension = entry.value;
+                          return InkWell(
+                            // Tıklanabilir konteynerlar için InkWell kullanın
+                            onTap: () {
+                              setState(() {
+                                _selectedIndexSize = index;
+                              });
+                            },
+                            child: Container(
+                              width: width / 5 + 9,
+                              height: height / 15,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(255, 44, 44, 44),
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(14.0)),
+                                border: _selectedIndexSize ==
+                                        index // Seçili ise border'ı ekle
+                                    ? Border.all(
+                                        color: const Color.fromARGB(
+                                            255, 83, 196, 255),
+                                        width: 2.0,
+                                      )
+                                    : null, // Seçili değilse border'ı kaldır
+                              ),
+                              child: Center(
+                                child: Text(
+                                  dimension,
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ),
+                          );
+                        }).toList()
+                      : _dimensions.asMap().entries.map((entry) {
+                          int index = entry.key;
+                          String dimension = entry.value;
+                          return InkWell(
+                            // Tıklanabilir konteynerlar için InkWell kullanın
+                            onTap: () {
+                              setState(() {
+                                _selectedIndexSize = index;
+                              });
+                            },
+                            child: Container(
+                              width: width / 5 + 9,
+                              height: height / 15,
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(255, 44, 44, 44),
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(14.0)),
+                                border: _selectedIndexSize ==
+                                        index // Seçili ise border'ı ekle
+                                    ? Border.all(
+                                        color: const Color.fromARGB(
+                                            255, 83, 196, 255),
+                                        width: 2.0,
+                                      )
+                                    : null, // Seçili değilse border'ı kaldır
+                              ),
+                              child: Center(
+                                child: Text(
+                                  dimension,
+                                  style: const TextStyle(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ),
+                          );
+                        }).toList(),
                 ),
               ),
               Padding(
@@ -485,6 +489,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 _selectedIndex != -1) {
                           try {
                             String url;
+                            int model = 2;
                             if (_selectedIndex == 0) {
                               toastification.show(
                                 context: context,
@@ -513,31 +518,43 @@ class _HomeScreenState extends State<HomeScreen> {
                                   _dimensions3[_selectedIndexSize], 'dall-e-3');
                               await addRecord(_prompt.text, url);
                               writeImageData(_prompt.text, 'dall-e-3', url);
+                              setState(() {
+                                model = 1;
+                              });
                             } else {
                               url = await dallE(_prompt.text,
                                   _dimensions[_selectedIndexSize], 'dall-e-2');
                               await addRecord(_prompt.text, url);
                               writeImageData(_prompt.text, 'dall-e-2', url);
+                              setState(() {
+                                model = 0;
+                              });
                             }
 
-                            int lenghtImage  = await getImagesInfo();
-                            if(lenghtImage % 3 == 0) {
-                              _showInterstitialAd(url);
+                            int lenghtImage = await getImagesInfo();
+                            if (lenghtImage % 3 == 0) {
+                              _showRewardedInterstitialAd(url, model);
                             } else {
-                              _showInterstitialAd(url);
+                              _showRewardedInterstitialAd(url, model);
                             }
-                            
                           } catch (error) {
                             // Hata yönetimi ekleyin (örnek: Hata mesajı göster)
                             // ignore: avoid_print
                             toastification.show(
-                              type: ToastificationType.error,
-                              style: ToastificationStyle.fillColored,
-                              // ignore: use_build_context_synchronously
-                              context: context,
-                              title: error.toString() == 'Exception: Failed to generate image: 400' ? const Text('İnternet bağlantınızı kontrol edin, müstehcen ve şiddet içeren promptlardan kaçının!') : error.toString() == 'Exception: Failed to generate image: 401' ? const Text('Uygulamanın son sürümünü kullandığından emin ol! Güncellemeleri kontrol et!') : Text(error.toString()) ,
-                              autoCloseDuration: const Duration(seconds: 5)
-                            );
+                                type: ToastificationType.error,
+                                style: ToastificationStyle.fillColored,
+                                // ignore: use_build_context_synchronously
+                                context: context,
+                                title: error.toString() ==
+                                        'Exception: Failed to generate image: 400'
+                                    ? const Text(
+                                        'İnternet bağlantınızı kontrol edin, müstehcen ve şiddet içeren promptlardan kaçının!')
+                                    : error.toString() ==
+                                            'Exception: Failed to generate image: 401'
+                                        ? const Text(
+                                            'Uygulamanın son sürümünü kullandığından emin ol! Güncellemeleri kontrol et!')
+                                        : Text(error.toString()),
+                                autoCloseDuration: const Duration(seconds: 5));
                           } finally {
                             setState(() {
                               _isClicked =
@@ -600,7 +617,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   const Column(
                     children: [
-                      Icon(Icons.create, color: Color.fromARGB(255, 83, 196, 255), size: 30,),
+                      Icon(
+                        Icons.create,
+                        color: Color.fromARGB(255, 83, 196, 255),
+                        size: 30,
+                      ),
                       Text(
                         'Resim Oluştur',
                         style:
@@ -617,7 +638,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     },
                     child: const Column(
                       children: [
-                        Icon(Icons.photo_camera_back_outlined, color: Color.fromRGBO(142, 142, 147, 1.0), size: 30,),
+                        Icon(
+                          Icons.photo_camera_back_outlined,
+                          color: Color.fromRGBO(142, 142, 147, 1.0),
+                          size: 30,
+                        ),
                         Text('Arşiv',
                             style: TextStyle(
                               color: Color.fromRGBO(142, 142, 147, 1.0),
@@ -625,11 +650,11 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                   ),
-          
                 ],
               ),
-              const SizedBox(height: 5,),
-              
+              const SizedBox(
+                height: 5,
+              ),
             ],
           ),
         ),
@@ -637,13 +662,12 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-
   @override
   void initState() {
     super.initState();
     getBannedInfo();
     _createInterstitialAd();
-    
+    _createRewardedInterstitialAd();
   }
 
   Widget _buildImageContainer(
@@ -720,11 +744,11 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-      void _createInterstitialAd() {
+  void _createInterstitialAd() {
     InterstitialAd.load(
         adUnitId: Platform.isAndroid
-            ? 'ads id'
-            : 'ads id ios',
+            ? 'ca-app-pub-8464918632664675/4268074491'
+            : 'ca-app-pub-3940256099942544/4411468910',
         request: request,
         adLoadCallback: InterstitialAdLoadCallback(
           onAdLoaded: (InterstitialAd ad) {
@@ -742,8 +766,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ));
   }
 
-
-void _showInterstitialAd(String url) {
+  void _showInterstitialAd(String url) {
     if (_interstitialAd == null) {
       return;
     }
@@ -761,14 +784,71 @@ void _showInterstitialAd(String url) {
           context,
           MaterialPageRoute(
             builder: (context) => ResultScreen(
-                                  promptText: _prompt.text,
-                                  imageUrl: url,
-                                ),
+              promptText: _prompt.text,
+              imageUrl: url,
+            ),
           ),
         );
       },
     );
     _interstitialAd!.show();
     _interstitialAd = null;
+  }
+
+  void _createRewardedInterstitialAd() {
+    if (_rewardedInterstitialAd != null) return; //
+    RewardedInterstitialAd.load(
+        adUnitId: Platform.isAndroid
+            ? 'ca-app-pub-8464918632664675/8622252472'
+            : 'ca-app-pub-3940256099942544/6978759866',
+        request: request,
+        rewardedInterstitialAdLoadCallback: RewardedInterstitialAdLoadCallback(
+          onAdLoaded: (RewardedInterstitialAd ad) {
+            _rewardedInterstitialAd = ad;
+            _numRewardedInterstitialLoadAttempts = 0;
+          },
+          onAdFailedToLoad: (LoadAdError error) {
+            _rewardedInterstitialAd = null;
+            _numRewardedInterstitialLoadAttempts += 1;
+            if (_numRewardedInterstitialLoadAttempts < maxFailedLoadAttempts) {
+              _createRewardedInterstitialAd();
+            }
+          },
+        ));
+  }
+
+  void _showRewardedInterstitialAd(String url, int dallModel) {
+    _rewardedInterstitialAd!.fullScreenContentCallback =
+        FullScreenContentCallback(
+      onAdShowedFullScreenContent: (RewardedInterstitialAd ad) =>
+          print('$ad onAdShowedFullScreenContent.'),
+      onAdDismissedFullScreenContent: (RewardedInterstitialAd ad) {
+        ad.dispose();
+        if (dallModel == 1) {
+          _showInterstitialAd(url);
+        } else {
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ResultScreen(
+                promptText: _prompt.text,
+                imageUrl: url,
+              ),
+            ),
+          );
+        }
+        //geçiş
+      },
+      onAdFailedToShowFullScreenContent:
+          (RewardedInterstitialAd ad, AdError error) {
+        ad.dispose();
+        _createRewardedInterstitialAd();
+      },
+    );
+
+    _rewardedInterstitialAd!.setImmersiveMode(true);
+    _rewardedInterstitialAd!
+        .show(onUserEarnedReward: (AdWithoutView ad, RewardItem reward) {});
+    _rewardedInterstitialAd = null;
   }
 }
